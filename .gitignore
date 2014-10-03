@@ -2,6 +2,10 @@
 
 i3helper
 
+#Tags file
+
+tags
+
 # Object files
 *.o
 *.ko
