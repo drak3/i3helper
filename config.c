@@ -5,8 +5,11 @@
 int i3h_config_parse(int argc, char* argv[], struct i3h_config* conf) 
 {    
     if(argc != 2) {
-	printf("Usage: %s <i3-socket-file>", argv[0]);
+    	printf("Usage: %s <i3-socket-file>", argv[0]);
+	exit(1);
     }
+    
+    printf("%s", argv[1]); 
 
     if(strlen(argv[1]) >= I3H_MAX_PATH_LEN) {
 	printf("socket file name too long\n");
