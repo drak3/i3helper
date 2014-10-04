@@ -11,6 +11,7 @@ struct i3h_config {
 /*
  * Parses the i3 config, falling back to default parameters
  */
-extern int i3h_config_parse(int argc, char* argv[], struct i3h_config *conf);
+extern int i3h_config_parse(int argc, char *argv[],
+			    struct i3h_config *conf);
 
 #endif

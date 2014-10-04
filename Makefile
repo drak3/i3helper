@@ -19,3 +19,14 @@ config.o: config.c config.h
 
 ipc.o: ipc.c ipc.h i3/ipc.h
 	$(CC) $(CFLAGS) -c -o ipc.o ipc.c
+
+.PHONY: clean beautiful
+
+clean:
+	-rm $(OBJECTS) i3helper
+
+#Calls gnu indent with the K&R style and deletes the backup files
+#FIXME: make the backup file deletion more robust, to not accidentally delete sth. important
+beautiful:
+	-indent -kr *.c *.h
+	-rm *.c~ *.h~
